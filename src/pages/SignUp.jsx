@@ -1,10 +1,12 @@
 import SignUpForm from "../components/auth/SignUpForm";
+import ThemeToggle from "../components/ThemeToggle";
 
 export default function SignUp({ onLoginClick }) {
   return (
-    <div className="min-h-screen w-full flex bg-[#F9F8F4] overflow-x-hidden font-sans">
+    <div className="min-h-screen w-full flex bg-[var(--app-bg)] overflow-x-hidden font-sans transition-colors duration-300">
+      <ThemeToggle />
       {/* Left Section */}
-      <div className="hidden md:flex md:w-[45%] lg:w-1/2 bg-[#294835] text-white px-16 flex-col justify-center select-none relative overflow-hidden">
+      <div className="hidden md:flex md:w-[45%] lg:w-1/2 bg-[var(--app-panel)] text-white px-16 flex-col justify-center select-none relative overflow-hidden transition-colors duration-300">
         {/* Subtle decorative background pattern that is extremely minimal and clean */}
         <div className="absolute inset-0 opacity-[0.03] pointer-events-none">
           <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
@@ -20,7 +22,7 @@ export default function SignUp({ onLoginClick }) {
         <div className="relative z-10 max-w-[480px]">
           {/* Logo */}
           <div className="text-[42px] font-bold text-white mb-[40px] tracking-tight leading-none">
-            Creazion
+            Creazione
           </div>
 
           {/* Heading */}
@@ -36,7 +38,7 @@ export default function SignUp({ onLoginClick }) {
       </div>
 
       {/* Right Section */}
-      <div className="w-full md:w-[55%] lg:w-1/2 flex items-center justify-center p-6 md:p-12 lg:p-16 bg-[#F9F8F4]">
+      <div className="w-full md:w-[55%] lg:w-1/2 flex items-center justify-center p-6 md:p-12 lg:p-16 bg-[var(--app-bg)] transition-colors duration-300">
         <SignUpForm onLoginClick={onLoginClick} />
       </div>
     </div>

@@ -44,15 +44,15 @@ export default function SignUpForm({ onLoginClick }) {
     <div className="w-full max-w-[520px] bg-transparent">
       {/* Heading */}
       <div className="mb-8">
-        <h1 className="text-[38px] font-bold text-[#222222] leading-tight tracking-tight font-sans">
+        <h1 className="text-[38px] font-bold text-[var(--app-heading)] leading-tight tracking-tight font-sans transition-colors duration-300">
           Creazione
         </h1>
-        <p className="text-[#6B7280] text-[15px] mt-2 font-medium">
+        <p className="text-[var(--app-muted)] text-[15px] mt-2 font-medium transition-colors duration-300">
           Already have an account?{" "}
           <button
             type="button"
             onClick={onLoginClick}
-            className="text-[#294835] hover:text-[#355B44] font-semibold transition-colors duration-300 underline underline-offset-4 cursor-pointer"
+            className="text-[var(--app-accent)] hover:text-[var(--app-accent-hover)] font-semibold transition-colors duration-300 underline underline-offset-4 cursor-pointer"
           >
             Log in
           </button>
@@ -63,7 +63,7 @@ export default function SignUpForm({ onLoginClick }) {
       <form onSubmit={handleSubmit} className="space-y-5">
         {/* Name Fields (Stacked Vertically) */}
         <div>
-          <Label htmlFor="firstName" className="text-[#222222] font-semibold text-xs tracking-wide uppercase mb-2 block">
+          <Label htmlFor="firstName" className="text-[var(--app-heading)] font-semibold text-xs tracking-wide uppercase mb-2 block transition-colors duration-300">
             First Name
           </Label>
           <Input
@@ -73,12 +73,12 @@ export default function SignUpForm({ onLoginClick }) {
             value={form.firstName}
             onChange={handleChange}
             required
-            className="h-11 rounded-xl border-[#D9D9D9] bg-white px-3.5 text-base md:text-sm text-[#222222] placeholder:text-[#7A7A7A]/60 transition-all duration-300 focus:border-[#294835] focus:ring-1 focus:ring-[#294835] shadow-none"
+            className="h-11 rounded-xl border-[var(--app-input-border)] bg-[var(--app-input-bg)] px-3.5 text-base md:text-sm text-[var(--app-heading)] placeholder:text-[var(--app-subtle)]/60 transition-all duration-300 focus:border-[var(--app-accent)] focus:ring-1 focus:ring-[var(--app-accent)] shadow-none"
           />
         </div>
         <div>
-          <Label htmlFor="middleName" className="text-[#222222] font-semibold text-xs tracking-wide uppercase mb-2 block">
-            Middle Name <span className="text-[#7A7A7A] font-normal">(Opt)</span>
+          <Label htmlFor="middleName" className="text-[var(--app-heading)] font-semibold text-xs tracking-wide uppercase mb-2 block transition-colors duration-300">
+            Middle Name <span className="text-[var(--app-subtle)] font-normal">(Opt)</span>
           </Label>
           <Input
             id="middleName"
@@ -86,12 +86,12 @@ export default function SignUpForm({ onLoginClick }) {
             placeholder="Michael"
             value={form.middleName}
             onChange={handleChange}
-            className="h-11 rounded-xl border-[#D9D9D9] bg-white px-3.5 text-base md:text-sm text-[#222222] placeholder:text-[#7A7A7A]/60 transition-all duration-300 focus:border-[#294835] focus:ring-1 focus:ring-[#294835] shadow-none"
+            className="h-11 rounded-xl border-[var(--app-input-border)] bg-[var(--app-input-bg)] px-3.5 text-base md:text-sm text-[var(--app-heading)] placeholder:text-[var(--app-subtle)]/60 transition-all duration-300 focus:border-[var(--app-accent)] focus:ring-1 focus:ring-[var(--app-accent)] shadow-none"
           />
         </div>
         <div>
-          <Label htmlFor="lastName" className="text-[#222222] font-semibold text-xs tracking-wide uppercase mb-2 block">
-            Last Name <span className="text-[#7A7A7A] font-normal">(Opt)</span>
+          <Label htmlFor="lastName" className="text-[var(--app-heading)] font-semibold text-xs tracking-wide uppercase mb-2 block transition-colors duration-300">
+            Last Name <span className="text-[var(--app-subtle)] font-normal">(Opt)</span>
           </Label>
           <Input
             id="lastName"
@@ -99,13 +99,13 @@ export default function SignUpForm({ onLoginClick }) {
             placeholder="Doe"
             value={form.lastName}
             onChange={handleChange}
-            className="h-11 rounded-xl border-[#D9D9D9] bg-white px-3.5 text-base md:text-sm text-[#222222] placeholder:text-[#7A7A7A]/60 transition-all duration-300 focus:border-[#294835] focus:ring-1 focus:ring-[#294835] shadow-none"
+            className="h-11 rounded-xl border-[var(--app-input-border)] bg-[var(--app-input-bg)] px-3.5 text-base md:text-sm text-[var(--app-heading)] placeholder:text-[var(--app-subtle)]/60 transition-all duration-300 focus:border-[var(--app-accent)] focus:ring-1 focus:ring-[var(--app-accent)] shadow-none"
           />
         </div>
 
         {/* Row 2: Email */}
         <div>
-          <Label htmlFor="email" className="text-[#222222] font-semibold text-xs tracking-wide uppercase mb-2 block">
+          <Label htmlFor="email" className="text-[var(--app-heading)] font-semibold text-xs tracking-wide uppercase mb-2 block transition-colors duration-300">
             Email Address
           </Label>
           <Input
@@ -116,19 +116,19 @@ export default function SignUpForm({ onLoginClick }) {
             value={form.email}
             onChange={handleChange}
             required
-            className="h-11 rounded-xl border-[#D9D9D9] bg-white px-3.5 text-base md:text-sm text-[#222222] placeholder:text-[#7A7A7A]/60 transition-all duration-300 focus:border-[#294835] focus:ring-1 focus:ring-[#294835] shadow-none"
+            className="h-11 rounded-xl border-[var(--app-input-border)] bg-[var(--app-input-bg)] px-3.5 text-base md:text-sm text-[var(--app-heading)] placeholder:text-[var(--app-subtle)]/60 transition-all duration-300 focus:border-[var(--app-accent)] focus:ring-1 focus:ring-[var(--app-accent)] shadow-none"
           />
         </div>
 
         {/* Row 3: Mobile Number */}
         <div>
-          <Label htmlFor="phone" className="text-[#222222] font-semibold text-xs tracking-wide uppercase mb-2 block">
+          <Label htmlFor="phone" className="text-[var(--app-heading)] font-semibold text-xs tracking-wide uppercase mb-2 block transition-colors duration-300">
             Mobile Number
           </Label>
           <div className="flex gap-3">
             <div className="w-[100px] shrink-0">
               <Select defaultValue="+91" value={form.countryCode} onValueChange={handleSelectChange}>
-                <SelectTrigger className="h-11 rounded-xl border-[#D9D9D9] bg-white focus:border-[#294835] focus:ring-1 focus:ring-[#294835] shadow-none cursor-pointer">
+                <SelectTrigger className="h-11 rounded-xl border-[var(--app-input-border)] bg-[var(--app-input-bg)] focus:border-[var(--app-accent)] focus:ring-1 focus:ring-[var(--app-accent)] shadow-none cursor-pointer text-[var(--app-heading)] transition-all duration-300">
                   <SelectValue placeholder="+91" />
                 </SelectTrigger>
                 <SelectContent>
@@ -149,14 +149,14 @@ export default function SignUpForm({ onLoginClick }) {
               value={form.phone}
               onChange={handleChange}
               required
-              className="flex-1 h-11 rounded-xl border-[#D9D9D9] bg-white px-3.5 text-base md:text-sm text-[#222222] placeholder:text-[#7A7A7A]/60 transition-all duration-300 focus:border-[#294835] focus:ring-1 focus:ring-[#294835] shadow-none"
+              className="flex-1 h-11 rounded-xl border-[var(--app-input-border)] bg-[var(--app-input-bg)] px-3.5 text-base md:text-sm text-[var(--app-heading)] placeholder:text-[var(--app-subtle)]/60 transition-all duration-300 focus:border-[var(--app-accent)] focus:ring-1 focus:ring-[var(--app-accent)] shadow-none"
             />
           </div>
         </div>
 
         {/* Row 4: Password */}
         <div>
-          <Label htmlFor="password" className="text-[#222222] font-semibold text-xs tracking-wide uppercase mb-2 block">
+          <Label htmlFor="password" className="text-[var(--app-heading)] font-semibold text-xs tracking-wide uppercase mb-2 block transition-colors duration-300">
             Password
           </Label>
           <div className="relative">
@@ -168,12 +168,12 @@ export default function SignUpForm({ onLoginClick }) {
               value={form.password}
               onChange={handleChange}
               required
-              className="h-11 rounded-xl border-[#D9D9D9] bg-white pl-3.5 pr-11 text-base md:text-sm text-[#222222] placeholder:text-[#7A7A7A]/60 transition-all duration-300 focus:border-[#294835] focus:ring-1 focus:ring-[#294835] shadow-none"
+              className="h-11 rounded-xl border-[var(--app-input-border)] bg-[var(--app-input-bg)] pl-3.5 pr-11 text-base md:text-sm text-[var(--app-heading)] placeholder:text-[var(--app-subtle)]/60 transition-all duration-300 focus:border-[var(--app-accent)] focus:ring-1 focus:ring-[var(--app-accent)] shadow-none"
             />
             <button
               type="button"
               onClick={() => setShowPassword(!showPassword)}
-              className="absolute right-3.5 top-1/2 -translate-y-1/2 text-[#6B7280] hover:text-[#222222] transition-colors focus:outline-none p-1 cursor-pointer"
+              className="absolute right-3.5 top-1/2 -translate-y-1/2 text-[var(--app-muted)] hover:text-[var(--app-heading)] transition-colors focus:outline-none p-1 cursor-pointer"
             >
               {showPassword ? <EyeOff className="w-5 h-5" /> : <Eye className="w-5 h-5" />}
             </button>
@@ -183,17 +183,17 @@ export default function SignUpForm({ onLoginClick }) {
         {/* Submit Button */}
         <Button
           type="submit"
-          className="w-full h-[52px] rounded-[12px] bg-[#294835] hover:bg-[#355B44] text-white font-semibold text-base transition-all duration-300 shadow-none cursor-pointer mt-2"
+          className="w-full h-[52px] rounded-[12px] bg-[var(--app-panel)] hover:bg-[var(--app-panel-hover)] text-white font-semibold text-base transition-all duration-300 shadow-none cursor-pointer mt-2"
         >
           Create Account
         </Button>
       </form>
 
       {/* Footer Text */}
-      <p className="text-center text-[12px] text-[#7A7A7A] mt-6 font-medium leading-relaxed">
+      <p className="text-center text-[12px] text-[var(--app-subtle)] mt-6 font-medium leading-relaxed transition-colors duration-300">
         By clicking "Create Account", you agree to our{" "}
-        <a href="#terms" className="hover:underline text-[#6B7280]">Terms of Service</a> and{" "}
-        <a href="#privacy" className="hover:underline text-[#6B7280]">Privacy Policy</a>.
+        <a href="#terms" className="hover:underline text-[var(--app-muted)]">Terms of Service</a> and{" "}
+        <a href="#privacy" className="hover:underline text-[var(--app-muted)]">Privacy Policy</a>.
       </p>
     </div>
   );

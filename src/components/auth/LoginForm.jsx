@@ -15,95 +15,95 @@ export default function LoginForm({ onSignUpClick }) {
   const [showPassword, setShowPassword] = useState(false);
 
   return (
-    <div className="w-full max-w-md">
+    <div className="w-full max-w-[520px] bg-transparent">
       <div className="mb-8">
-        <h1 className="text-4xl font-bold text-gray-900">
+        <h1 className="text-[38px] font-bold text-[var(--app-heading)] leading-tight tracking-tight font-sans transition-colors duration-300">
           Welcome Back
         </h1>
 
-        <p className="text-gray-500 mt-2">
-          Login to continue to CollabHub.
+        <p className="text-[var(--app-muted)] text-[15px] mt-2 font-medium transition-colors duration-300">
+          Login to continue to Creazione.
         </p>
       </div>
 
       <div className="space-y-5">
 
         <div>
-          <Label>Email Address</Label>
+          <Label className="text-[var(--app-heading)] font-semibold text-xs tracking-wide uppercase transition-colors duration-300">Email Address</Label>
 
           <Input
             type="email"
-            placeholder="Enter your email"
-            className="mt-2 h-11"
+            placeholder="name@company.com"
+            className="mt-2 h-11 rounded-xl border-[var(--app-input-border)] bg-[var(--app-input-bg)] px-3.5 text-base md:text-sm text-[var(--app-heading)] placeholder:text-[var(--app-subtle)]/60 transition-all duration-300 focus:border-[var(--app-accent)] focus:ring-1 focus:ring-[var(--app-accent)] shadow-none"
           />
         </div>
 
         <div>
-          <Label>Password</Label>
+          <Label className="text-[var(--app-heading)] font-semibold text-xs tracking-wide uppercase transition-colors duration-300">Password</Label>
 
           <div className="relative mt-2">
 
             <Input
               type={showPassword ? "text" : "password"}
-              placeholder="Enter your password"
-              className="h-11 pr-10"
+              placeholder="••••••••"
+              className="h-11 rounded-xl border-[var(--app-input-border)] bg-[var(--app-input-bg)] pl-3.5 pr-11 text-base md:text-sm text-[var(--app-heading)] placeholder:text-[var(--app-subtle)]/60 transition-all duration-300 focus:border-[var(--app-accent)] focus:ring-1 focus:ring-[var(--app-accent)] shadow-none"
             />
 
             <button
               type="button"
               onClick={() => setShowPassword(!showPassword)}
-              className="absolute right-3 top-3 text-gray-500"
+              className="absolute right-3.5 top-1/2 -translate-y-1/2 text-[var(--app-muted)] hover:text-[var(--app-heading)] transition-colors focus:outline-none p-1 cursor-pointer"
             >
-              {showPassword ? <EyeOff size={18} /> : <Eye size={18} />}
+              {showPassword ? <EyeOff className="w-5 h-5" /> : <Eye className="w-5 h-5" />}
             </button>
 
           </div>
         </div>
 
-        <div className="flex items-center justify-between text-sm">
+        <div className="flex items-center justify-between text-sm text-[var(--app-heading)] transition-colors duration-300">
 
           <label className="flex items-center gap-2">
             <input type="checkbox" />
             Remember me
           </label>
 
-          <button className="text-emerald-700 hover:underline">
+          <button className="text-[var(--app-accent)] hover:text-[var(--app-accent-hover)] hover:underline font-semibold transition-colors duration-300 cursor-pointer">
             Forgot Password?
           </button>
 
         </div>
 
-        <Button className="w-full h-11 bg-emerald-700 hover:bg-emerald-800">
+        <Button className="w-full h-[52px] rounded-[12px] bg-[var(--app-panel)] hover:bg-[var(--app-panel-hover)] text-white font-semibold text-base transition-all duration-300 shadow-none cursor-pointer">
           Login
         </Button>
 
         <div className="flex items-center gap-4">
-          <div className="h-px bg-gray-300 flex-1"></div>
-          <span className="text-gray-500 text-sm">OR</span>
-          <div className="h-px bg-gray-300 flex-1"></div>
+          <div className="h-px bg-[var(--app-input-border)] flex-1 transition-colors duration-300"></div>
+          <span className="text-[var(--app-subtle)] text-sm transition-colors duration-300">OR</span>
+          <div className="h-px bg-[var(--app-input-border)] flex-1 transition-colors duration-300"></div>
         </div>
 
         <Button
           variant="outline"
-          className="w-full h-11"
+          className="w-full h-11 rounded-xl border-[var(--app-input-border)] bg-[var(--app-input-bg)] text-[var(--app-heading)] hover:bg-[var(--app-input-border)]/20 transition-all duration-300"
         >
           Continue with Google
         </Button>
 
         <Button
           variant="outline"
-          className="w-full h-11"
+          className="w-full h-11 rounded-xl border-[var(--app-input-border)] bg-[var(--app-input-bg)] text-[var(--app-heading)] hover:bg-[var(--app-input-border)]/20 transition-all duration-300"
         >
           <GithubIcon />
           Continue with GitHub
         </Button>
 
-        <p className="text-center text-sm text-gray-500">
+        <p className="text-center text-[12px] text-[var(--app-subtle)] mt-2 font-medium transition-colors duration-300">
           Don't have an account?{" "}
           <button
             type="button"
             onClick={onSignUpClick}
-            className="text-emerald-700 font-semibold cursor-pointer hover:underline bg-transparent border-none p-0 inline"
+            className="text-[var(--app-accent)] hover:text-[var(--app-accent-hover)] font-semibold transition-colors duration-300 underline underline-offset-4 cursor-pointer bg-transparent border-none p-0 inline"
           >
             Sign Up
           </button>
